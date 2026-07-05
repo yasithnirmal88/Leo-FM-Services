@@ -23,7 +23,7 @@ function StatItem({ icon: Icon, value, suffix, label, isVisible }: {
       <div className="text-4xl lg:text-5xl font-bold font-heading text-white">
         {count}{suffix}
       </div>
-      <div className="text-sm text-white/50 font-medium mt-1.5">{label}</div>
+      <div className="text-base text-white/50 font-medium mt-1.5">{label}</div>
     </div>
   )
 }

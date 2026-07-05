@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
+import InkReveal from './ui/ink-reveal'
 import { Star } from 'lucide-react'
 
 const testimonials = [
@@ -44,15 +45,15 @@ function TestimonialCard({ quote, name, company, rating, index }: {
       initial={{ opacity: 0, y: 40 }}
       animate={isVisible ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: index * 0.15, ease: 'easeOut' }}
-      className="p-8 rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-lg hover:shadow-gray-200/40 transition-all duration-300 hover:-translate-y-1 flex flex-col"
+      className="p-8 rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-lg hover:shadow-gray-200/40 transition-all duration-300 hover:-translate-y-1 flex flex-col pointer-events-auto"
     >
       <Stars count={rating} />
-      <blockquote className="mt-4 text-sm text-slate-500 leading-relaxed flex-1">
+      <blockquote className="mt-4 text-base text-slate-500 leading-relaxed flex-1">
         &ldquo;{quote}&rdquo;
       </blockquote>
       <div className="mt-6 pt-5 border-t border-gray-50">
-        <div className="font-semibold text-sm text-navy-800">{name}</div>
-        <div className="text-xs text-slate-400 mt-0.5">{company}</div>
+        <div className="font-semibold text-base text-navy-800">{name}</div>
+        <div className="text-sm text-slate-400 mt-0.5">{company}</div>
       </div>
     </motion.div>
   )
@@ -62,8 +63,15 @@ export default function Testimonials() {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.05 })
 
   return (
-    <section className="py-24 lg:py-32">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8" ref={ref}>
+    <section className="relative py-24 lg:py-32 overflow-hidden">
+      <img src="/office6.png" alt="" className="absolute inset-0 w-full h-full object-cover" />
+      <InkReveal
+        maskColor={[247, 248, 250]}
+        maskOpacity={1}
+        brushSize={160}
+        className="absolute inset-0"
+      />
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pointer-events-none" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
@@ -76,7 +84,7 @@ export default function Testimonials() {
           <h2 className="text-4xl lg:text-5xl font-bold font-heading text-navy-800 mt-4 leading-tight">
             Trusted by industry leaders
           </h2>
-          <p className="text-slate-400 mt-4 text-base leading-relaxed">
+          <p className="text-slate-400 mt-4 text-lg leading-relaxed">
             See what our clients say about partnering with LEO FM.
           </p>
         </motion.div>

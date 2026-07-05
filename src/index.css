@@ -11,8 +11,8 @@
   --color-navy-700: #1e3b63;
   --color-navy-800: #16386b;
   --color-navy-900: #0f2a52;
-  --color-slate-400: #8e9091;
-  --color-slate-500: #6d6e71;
+  --color-slate-400: #555658;
+  --color-slate-500: #4a4b4e;
   --color-slate-600: #545557;
   --color-accent: #2e6ff2;
   --color-accent-hover: #1a5bd4;
@@ -29,7 +29,7 @@ html {
 body {
   font-family: var(--font-body);
   color: var(--color-slate-600);
-  background-color: #ffffff;
+  background-color: #f7f8fa;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

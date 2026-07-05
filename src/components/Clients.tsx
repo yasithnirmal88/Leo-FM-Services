@@ -21,7 +21,7 @@ export default function Clients() {
           initial={{ opacity: 0 }}
           animate={isVisible ? { opacity: 1 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center text-xs font-semibold tracking-[0.2em] uppercase text-slate-400 mb-10"
+          className="text-center text-sm font-semibold tracking-[0.2em] uppercase text-slate-400 mb-10"
         >
           Trusted by leading organizations
         </motion.p>
@@ -36,7 +36,7 @@ export default function Clients() {
               className="flex items-center gap-2 text-slate-300 hover:text-slate-400 transition-colors duration-200"
             >
               <client.icon size={20} />
-              <span className="text-xs font-semibold tracking-wide whitespace-nowrap">{client.name}</span>
+              <span className="text-sm font-semibold tracking-wide whitespace-nowrap">{client.name}</span>
             </motion.div>
           ))}
         </div>

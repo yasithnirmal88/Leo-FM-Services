@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
+import InkReveal from './ui/ink-reveal'
 import {
   Sparkles, Droplets, Sun, Sofa, Shield,
   Wrench, AlertTriangle, Users, Clipboard,
@@ -60,8 +61,15 @@ export default function Capabilities() {
   const items = capabilities[activeTab]
 
   return (
-    <section id="capabilities" className="py-24 lg:py-32">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8" ref={ref}>
+    <section id="capabilities" className="relative py-24 lg:py-32 overflow-hidden">
+      <img src="/office4.png" alt="" className="absolute inset-0 w-full h-full object-cover" />
+      <InkReveal
+        maskColor={[247, 248, 250]}
+        maskOpacity={1}
+        brushSize={160}
+        className="absolute inset-0"
+      />
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pointer-events-none" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
@@ -74,7 +82,7 @@ export default function Capabilities() {
           <h2 className="text-4xl lg:text-5xl font-bold font-heading text-navy-800 mt-4 leading-tight">
             Full-scope capabilities, one accountable team
           </h2>
-          <p className="text-slate-400 mt-4 text-base leading-relaxed">
+          <p className="text-slate-400 mt-4 text-lg leading-relaxed">
             From daily cleaning to capital planning — every facility need under a single partnership.
           </p>
         </motion.div>
@@ -84,7 +92,7 @@ export default function Capabilities() {
             <button
               key={cat.id}
               onClick={() => setActiveTab(cat.id)}
-              className="relative px-5 py-2.5 text-sm font-medium rounded-full transition-colors duration-200"
+              className="relative px-5 py-2.5 text-base font-medium rounded-full transition-colors duration-200 pointer-events-auto"
             >
               {activeTab === cat.id && (
                 <motion.div
@@ -93,7 +101,7 @@ export default function Capabilities() {
                   transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                 />
               )}
-              <span className={`relative z-10 ${activeTab === cat.id ? 'text-white' : 'text-slate-400 hover:text-navy-800'}`}>
+              <span className={`relative z-10 text-base ${activeTab === cat.id ? 'text-white' : 'text-slate-400 hover:text-navy-800'}`}>
                 {cat.label}
               </span>
             </button>
@@ -117,13 +125,13 @@ export default function Capabilities() {
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className="group p-5 rounded-xl bg-white border border-gray-100 transition-all duration-300 hover:shadow-xl hover:shadow-gray-200/50 hover:-translate-y-1"
+                className="group p-5 rounded-xl bg-white border border-gray-100 transition-all duration-300 hover:shadow-xl hover:shadow-gray-200/50 hover:-translate-y-1 pointer-events-auto"
               >
                 <div className="w-9 h-9 rounded-lg flex items-center justify-center mb-3 transition-all duration-300 group-hover:scale-110 group-hover:rotate-[-4deg]" style={{ backgroundColor: '#2E6FF210' }}>
                   <item.icon size={16} className="text-accent" />
                 </div>
-                <h3 className="text-sm font-bold font-heading text-navy-800 mb-1.5 leading-snug">{item.title}</h3>
-                <p className="text-sm text-slate-400 leading-relaxed">{item.description}</p>
+                <h3 className="text-base font-bold font-heading text-navy-800 mb-1.5 leading-snug">{item.title}</h3>
+                <p className="text-base text-slate-400 leading-relaxed">{item.description}</p>
               </motion.div>
             ))}
           </motion.div>

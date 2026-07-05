@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
+import InkReveal from './ui/ink-reveal'
 import {
   Sparkles,
   Droplets,
@@ -59,7 +60,7 @@ function ServiceCard({ icon: Icon, title, description, color, index }: {
       initial={{ opacity: 0, y: 40 }}
       animate={isVisible ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: index * 0.1, ease: 'easeOut' }}
-      className="group relative p-8 rounded-xl bg-white border border-gray-100 transition-all duration-300 hover:shadow-xl hover:shadow-gray-200/50 hover:-translate-y-1"
+      className="group relative p-8 rounded-xl bg-white border border-gray-100 transition-all duration-300 hover:shadow-xl hover:shadow-gray-200/50 hover:-translate-y-1 pointer-events-auto"
     >
       <div
         className="w-12 h-12 rounded-xl flex items-center justify-center mb-5 transition-all duration-300 group-hover:scale-110 group-hover:rotate-[-4deg]"
@@ -68,7 +69,7 @@ function ServiceCard({ icon: Icon, title, description, color, index }: {
         <Icon size={22} style={{ color }} />
       </div>
       <h3 className="text-lg font-bold font-heading text-navy-800 mb-2">{title}</h3>
-      <p className="text-sm text-slate-400 leading-relaxed">{description}</p>
+      <p className="text-base text-slate-400 leading-relaxed">{description}</p>
       <div className="absolute inset-0 rounded-xl border border-transparent transition-all duration-300 group-hover:border-accent/20 pointer-events-none" />
     </motion.div>
   )
@@ -78,8 +79,15 @@ export default function Services() {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.05 })
 
   return (
-    <section id="services" className="py-24 lg:py-32">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8" ref={ref}>
+    <section id="services" className="relative py-24 lg:py-32 overflow-hidden">
+      <img src="/office%202.png" alt="" className="absolute inset-0 w-full h-full object-cover" />
+      <InkReveal
+        maskColor={[247, 248, 250]}
+        maskOpacity={1}
+        brushSize={160}
+        className="absolute inset-0"
+      />
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pointer-events-none" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
@@ -92,7 +100,7 @@ export default function Services() {
           <h2 className="text-4xl lg:text-5xl font-bold font-heading text-navy-800 mt-4 leading-tight">
             Comprehensive cleaning services
           </h2>
-          <p className="text-slate-400 mt-4 text-base leading-relaxed">
+          <p className="text-slate-400 mt-4 text-lg leading-relaxed">
             Every surface, schedule, and standard under one accountable partnership.
           </p>
         </motion.div>

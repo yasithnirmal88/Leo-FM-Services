@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
+import InkReveal from './ui/ink-reveal'
 import { ClipboardList, FileText, Users, Settings } from 'lucide-react'
 
 const steps = [
@@ -13,8 +14,15 @@ export default function Process() {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.05 })
 
   return (
-    <section id="process" className="py-24 lg:py-32">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8" ref={ref}>
+    <section id="process" className="relative py-24 lg:py-32 overflow-hidden">
+      <img src="/office5.webp" alt="" className="absolute inset-0 w-full h-full object-cover" />
+      <InkReveal
+        maskColor={[247, 248, 250]}
+        maskOpacity={1}
+        brushSize={160}
+        className="absolute inset-0"
+      />
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pointer-events-none" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
@@ -27,7 +35,7 @@ export default function Process() {
           <h2 className="text-4xl lg:text-5xl font-bold font-heading text-navy-800 mt-4 leading-tight">
             From first call to seamless service
           </h2>
-          <p className="text-slate-400 mt-4 text-base leading-relaxed">
+          <p className="text-slate-400 mt-4 text-lg leading-relaxed">
             A proven process that makes onboarding effortless.
           </p>
         </motion.div>
@@ -57,7 +65,7 @@ export default function Process() {
                   </div>
                 </div>
                 <h3 className="text-base font-bold font-heading text-navy-800 mb-2">{step.title}</h3>
-                <p className="text-sm text-slate-400 leading-relaxed max-w-[220px]">{step.description}</p>
+                <p className="text-base text-slate-400 leading-relaxed max-w-[240px]">{step.description}</p>
               </motion.div>
             )
           })}

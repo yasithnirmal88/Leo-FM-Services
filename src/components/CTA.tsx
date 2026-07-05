@@ -101,13 +101,13 @@ export default function CTA() {
             transition={{ duration: 0.6, ease: 'easeOut' }}
             className="lg:col-span-5"
           >
-            <span className="text-xs font-semibold tracking-[0.2em] uppercase text-white/60">
+            <span className="text-sm font-semibold tracking-[0.2em] uppercase text-white/60">
               Get started
             </span>
             <h2 className="text-4xl lg:text-5xl font-bold font-heading text-white mt-4 leading-tight">
               Ready for a cleaner facility?
             </h2>
-            <p className="text-white/60 mt-4 text-base leading-relaxed">
+            <p className="text-white/60 mt-4 text-lg leading-relaxed">
               Tell us about your space and we'll craft a proposal tailored to 
               your needs — typically within 24 hours.
             </p>
@@ -117,7 +117,7 @@ export default function CTA() {
                 'Custom service proposal',
                 'Transparent, fixed pricing',
               ].map((item) => (
-                <div key={item} className="flex items-center gap-3 text-white/70 text-sm">
+                <div key={item} className="flex items-center gap-3 text-white/70 text-base">
                   <CheckCircle2 size={16} className="text-white/40" />
                   {item}
                 </div>
@@ -134,7 +134,7 @@ export default function CTA() {
             <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 shadow-xl space-y-5" noValidate>
               <div className="grid sm:grid-cols-2 gap-5">
                 <div>
-                  <label htmlFor="name" className="block text-xs font-semibold text-navy-800 mb-1.5">Full Name</label>
+                  <label htmlFor="name" className="block text-sm font-semibold text-navy-800 mb-1.5">Full Name</label>
                   <input
                     id="name"
                     name="name"
@@ -142,12 +142,12 @@ export default function CTA() {
                     value={form.name}
                     onChange={handleChange}
                     placeholder="John Smith"
-                    className={`w-full px-4 py-2.5 text-sm border rounded-lg bg-offwhite text-navy-800 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all ${errors.name ? 'border-red-300' : 'border-gray-200'}`}
+                    className={`w-full px-4 py-3 text-base border rounded-lg bg-offwhite text-navy-800 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all ${errors.name ? 'border-red-300' : 'border-gray-200'}`}
                   />
                   {errors.name && <p className="text-xs text-red-400 mt-1">{errors.name}</p>}
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-xs font-semibold text-navy-800 mb-1.5">Email Address</label>
+                  <label htmlFor="email" className="block text-sm font-semibold text-navy-800 mb-1.5">Email Address</label>
                   <input
                     id="email"
                     name="email"
@@ -155,14 +155,14 @@ export default function CTA() {
                     value={form.email}
                     onChange={handleChange}
                     placeholder="john@company.com"
-                    className={`w-full px-4 py-2.5 text-sm border rounded-lg bg-offwhite text-navy-800 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all ${errors.email ? 'border-red-300' : 'border-gray-200'}`}
+                    className={`w-full px-4 py-3 text-base border rounded-lg bg-offwhite text-navy-800 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all ${errors.email ? 'border-red-300' : 'border-gray-200'}`}
                   />
                   {errors.email && <p className="text-xs text-red-400 mt-1">{errors.email}</p>}
                 </div>
               </div>
               <div className="grid sm:grid-cols-2 gap-5">
                 <div>
-                  <label htmlFor="phone" className="block text-xs font-semibold text-navy-800 mb-1.5">Phone Number</label>
+                  <label htmlFor="phone" className="block text-sm font-semibold text-navy-800 mb-1.5">Phone Number</label>
                   <input
                     id="phone"
                     name="phone"
@@ -170,18 +170,18 @@ export default function CTA() {
                     value={form.phone}
                     onChange={handleChange}
                     placeholder="+1 (555) 123-4567"
-                    className={`w-full px-4 py-2.5 text-sm border rounded-lg bg-offwhite text-navy-800 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all ${errors.phone ? 'border-red-300' : 'border-gray-200'}`}
+                    className={`w-full px-4 py-3 text-base border rounded-lg bg-offwhite text-navy-800 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all ${errors.phone ? 'border-red-300' : 'border-gray-200'}`}
                   />
                   {errors.phone && <p className="text-xs text-red-400 mt-1">{errors.phone}</p>}
                 </div>
                 <div>
-                  <label htmlFor="service" className="block text-xs font-semibold text-navy-800 mb-1.5">Service Needed</label>
+                  <label htmlFor="service" className="block text-sm font-semibold text-navy-800 mb-1.5">Service Needed</label>
                   <select
                     id="service"
                     name="service"
                     value={form.service}
                     onChange={handleChange}
-                    className={`w-full px-4 py-2.5 text-sm border rounded-lg bg-offwhite text-navy-800 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all ${errors.service ? 'border-red-300' : 'border-gray-200'}`}
+                    className={`w-full px-4 py-3 text-base border rounded-lg bg-offwhite text-navy-800 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all ${errors.service ? 'border-red-300' : 'border-gray-200'}`}
                   >
                     <option value="">Select a service</option>
                     {servicesList.map((s) => (
@@ -192,7 +192,7 @@ export default function CTA() {
                 </div>
               </div>
               <div>
-                <label htmlFor="message" className="block text-xs font-semibold text-navy-800 mb-1.5">Message (Optional)</label>
+                <label htmlFor="message" className="block text-sm font-semibold text-navy-800 mb-1.5">Message (Optional)</label>
                 <textarea
                   id="message"
                   name="message"
@@ -200,13 +200,13 @@ export default function CTA() {
                   value={form.message}
                   onChange={handleChange}
                   placeholder="Tell us about your facility and needs..."
-                  className="w-full px-4 py-2.5 text-sm border border-gray-200 rounded-lg bg-offwhite text-navy-800 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all resize-none"
+                  className="w-full px-4 py-3 text-base border border-gray-200 rounded-lg bg-offwhite text-navy-800 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all resize-none"
                 />
               </div>
               <button
                 type="submit"
                 disabled={submitting}
-                className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-navy-800 text-white text-sm font-semibold rounded-lg hover:bg-navy-900 transition-all duration-200 hover:shadow-lg hover:shadow-navy-900/25 disabled:opacity-60"
+                className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-navy-800 text-white text-base font-semibold rounded-lg hover:bg-navy-900 transition-all duration-200 hover:shadow-lg hover:shadow-navy-900/25 disabled:opacity-60"
               >
                 {submitting ? (
                   <>

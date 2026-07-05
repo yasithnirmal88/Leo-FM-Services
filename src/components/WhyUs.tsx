@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
+import InkReveal from './ui/ink-reveal'
 import { CheckCircle2 } from 'lucide-react'
 
 const reasons = [
@@ -39,7 +40,7 @@ function ReasonItem({ title, description, index }: {
       </div>
       <div>
         <h3 className="text-base font-bold text-navy-800 font-heading">{title}</h3>
-        <p className="text-sm text-slate-400 mt-1 leading-relaxed">{description}</p>
+        <p className="text-base text-slate-400 mt-1 leading-relaxed">{description}</p>
       </div>
     </motion.div>
   )
@@ -49,8 +50,15 @@ export default function WhyUs() {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.05 })
 
   return (
-    <section id="why-us" className="py-24 lg:py-32">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8" ref={ref}>
+    <section id="why-us" className="relative py-24 lg:py-32 overflow-hidden">
+      <img src="/office%203.png" alt="" className="absolute inset-0 w-full h-full object-cover" />
+      <InkReveal
+        maskColor={[247, 248, 250]}
+        maskOpacity={1}
+        brushSize={160}
+        className="absolute inset-0"
+      />
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pointer-events-none z-10" ref={ref}>
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           <div className="lg:col-span-6">
             <motion.div
@@ -65,7 +73,7 @@ export default function WhyUs() {
                 Built different.{' '}
                 <span className="text-accent">Built better.</span>
               </h2>
-              <p className="text-slate-400 mt-4 text-base leading-relaxed max-w-md">
+              <p className="text-slate-400 mt-4 text-lg leading-relaxed max-w-md">
                 We don't just clean buildings — we elevate how they feel, 
                 function, and reflect your brand.
               </p>
@@ -86,8 +94,8 @@ export default function WhyUs() {
           >
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=85"
-                alt="Luxury hotel interior"
+                src="/hotel.png"
+                alt="Hotel interior"
                 className="absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-navy-800/30 mix-blend-multiply" />

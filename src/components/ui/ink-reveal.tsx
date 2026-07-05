@@ -3,6 +3,7 @@ import { useEffect, useRef, useCallback } from "react";
 
 interface InkRevealProps {
   maskColor?: [number, number, number];
+  maskOpacity?: number;
   brushSize?: number;
   lifetime?: number;
   rStart?: number;
@@ -29,6 +30,7 @@ interface Stamp {
 
 export default function InkReveal({
   maskColor = [252, 250, 248],
+  maskOpacity = 0.85,
   brushSize = 128,
   lifetime = 600,
   rStart = 10,
@@ -67,9 +69,9 @@ export default function InkReveal({
     if (!ctx) return;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.globalCompositeOperation = "source-over";
-    ctx.fillStyle = `rgb(${mc[0]},${mc[1]},${mc[2]})`;
+    ctx.fillStyle = `rgba(${mc[0]},${mc[1]},${mc[2]},${maskOpacity})`;
     ctx.fillRect(0, 0, w, h);
-  }, [mc]);
+  }, [mc, maskOpacity]);
 
   const carveInk = useCallback(
     (
@@ -150,8 +152,9 @@ export default function InkReveal({
     const now = performance.now();
     const stamps = stampsRef.current;
 
+    ctx.clearRect(0, 0, w, h);
     ctx.globalCompositeOperation = "source-over";
-    ctx.fillStyle = `rgb(${mc[0]},${mc[1]},${mc[2]})`;
+    ctx.fillStyle = `rgba(${mc[0]},${mc[1]},${mc[2]},${maskOpacity})`;
     ctx.fillRect(0, 0, w, h);
     ctx.globalCompositeOperation = "destination-out";
 
@@ -172,7 +175,7 @@ export default function InkReveal({
     } else {
       runningRef.current = false;
     }
-  }, [carveInk, mc, lifetime, rStart]);
+  }, [carveInk, mc, maskOpacity, lifetime, rStart]);
 
   const startLoop = useCallback(() => {
     if (!runningRef.current) {

@@ -22,7 +22,7 @@ export default function Footer() {
             className="sm:col-span-2 lg:col-span-4"
           >
             <img src="/idea%205%20png.png" alt="LEO FM" className="h-10 w-auto brightness-0 invert opacity-100" />
-              <p className="mt-4 text-sm text-white/60 leading-relaxed max-w-xs">
+              <p className="mt-4 text-base text-white/60 leading-relaxed max-w-xs">
               Premium commercial cleaning and facility management for organizations that demand the highest standards.
             </p>
             <div className="flex gap-3 mt-6">
@@ -40,34 +40,34 @@ export default function Footer() {
           </motion.div>
 
           <div className="lg:col-span-2">
-            <h4 className="text-xs font-semibold tracking-[0.15em] uppercase text-white/50 mb-5">Company</h4>
+            <h4 className="text-sm font-semibold tracking-[0.15em] uppercase text-white/50 mb-5">Company</h4>
             <ul className="space-y-3">
               {companyLinks.map((item) => (
                 <li key={item}>
-                  <a href="#" className="text-sm text-white/90 hover:text-white transition-colors duration-200">{item}</a>
+                  <a href="#" className="text-base text-white/90 hover:text-white transition-colors duration-200">{item}</a>
                 </li>
               ))}
             </ul>
           </div>
 
           <div className="lg:col-span-3">
-            <h4 className="text-xs font-semibold tracking-[0.15em] uppercase text-white/50 mb-5">Services</h4>
+            <h4 className="text-sm font-semibold tracking-[0.15em] uppercase text-white/50 mb-5">Services</h4>
             <ul className="space-y-3">
               {serviceLinks.map((item) => (
                 <li key={item}>
-                  <a href="#services" className="text-sm text-white/90 hover:text-white transition-colors duration-200">{item}</a>
+                  <a href="#services" className="text-base text-white/90 hover:text-white transition-colors duration-200">{item}</a>
                 </li>
               ))}
             </ul>
           </div>
 
           <div className="lg:col-span-3">
-            <h4 className="text-xs font-semibold tracking-[0.15em] uppercase text-white/50 mb-5">Contact</h4>
+            <h4 className="text-sm font-semibold tracking-[0.15em] uppercase text-white/50 mb-5">Contact</h4>
             <ul className="space-y-3">
               {contactDetails.map(({ icon: Icon, label }) => (
                 <li key={label} className="flex items-start gap-3">
                   <Icon size={14} className="mt-0.5 shrink-0 text-white/50" />
-                  <span className="text-sm text-white/90">{label}</span>
+                  <span className="text-base text-white/90">{label}</span>
                 </li>
               ))}
             </ul>
