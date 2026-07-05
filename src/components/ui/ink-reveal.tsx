@@ -58,8 +58,9 @@ export default function InkReveal({
     if (!canvas) return;
 
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    const w = window.innerWidth;
-    const h = window.innerHeight;
+    const parent = canvas.parentElement;
+    const w = globalTracking ? window.innerWidth : (parent ? parent.offsetWidth : window.innerWidth);
+    const h = globalTracking ? window.innerHeight : (parent ? parent.offsetHeight : window.innerHeight);
     dimsRef.current = { w, h };
     canvas.width = Math.round(w * dpr);
     canvas.height = Math.round(h * dpr);
@@ -71,7 +72,7 @@ export default function InkReveal({
     ctx.globalCompositeOperation = "source-over";
     ctx.fillStyle = `rgba(${mc[0]},${mc[1]},${mc[2]},${maskOpacity})`;
     ctx.fillRect(0, 0, w, h);
-  }, [mc, maskOpacity]);
+  }, [mc, maskOpacity, globalTracking]);
 
   const carveInk = useCallback(
     (
@@ -200,6 +201,16 @@ export default function InkReveal({
     window.addEventListener("resize", resize);
     return () => window.removeEventListener("resize", resize);
   }, [resize]);
+
+  useEffect(() => {
+    if (globalTracking) return;
+    const canvas = canvasRef.current;
+    const parent = canvas?.parentElement;
+    if (!parent) return;
+    const ro = new ResizeObserver(() => resize());
+    ro.observe(parent);
+    return () => ro.disconnect();
+  }, [globalTracking, resize]);
 
   useEffect(() => {
     if (!globalTracking) return;
