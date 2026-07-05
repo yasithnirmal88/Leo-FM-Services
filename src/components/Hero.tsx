@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowRight, Shield, Clock, Building2, Users } from 'lucide-react'
 import { useCountUp } from '../hooks/useCountUp'
+import { useMediaQuery } from '../hooks/useMediaQuery'
 import InkReveal from './ui/ink-reveal'
 
 const stats = [
@@ -47,15 +48,19 @@ function StatItem({ icon: Icon, value, suffix, label, color }: {
 }
 
 export default function Hero() {
+  const isDesktop = useMediaQuery('(min-width: 768px)')
+
   return (
     <section id="hero" className="relative min-h-screen flex flex-col overflow-hidden">
       <img src="/office.png" alt="" className="absolute inset-0 w-full h-full object-cover" />
-      <InkReveal
-        maskColor={[247, 248, 250]}
-        maskOpacity={0.9}
-        brushSize={180}
-        className="absolute inset-0"
-      />
+      {isDesktop && (
+        <InkReveal
+          maskColor={[247, 248, 250]}
+          maskOpacity={0.9}
+          brushSize={180}
+          className="absolute inset-0"
+        />
+      )}
       <div className="absolute inset-0 bg-gradient-to-b from-black/15 via-black/25 to-black/40 pointer-events-none z-[1]" />
 
       <div className="relative z-10 flex-1 flex flex-col pointer-events-none">
