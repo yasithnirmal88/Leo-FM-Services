@@ -6,7 +6,6 @@ import Capabilities from './components/Capabilities'
 import Process from './components/Process'
 import Stats from './components/Stats'
 import Testimonials from './components/Testimonials'
-import Clients from './components/Clients'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
 
@@ -23,7 +22,6 @@ export default function App() {
           <Process />
           <Stats />
           <Testimonials />
-          <Clients />
           <CTA />
         </main>
         <Footer />
