@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
-import InkReveal from './ui/ink-reveal'
 import {
   Sparkles,
   Droplets,
@@ -79,15 +78,8 @@ export default function Services() {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.05 })
 
   return (
-    <section id="services" className="relative py-24 lg:py-32 overflow-hidden">
-      <img src="/office%202.png" alt="" className="absolute inset-0 w-full h-full object-cover" />
-      <InkReveal
-        maskColor={[247, 248, 250]}
-        maskOpacity={1}
-        brushSize={160}
-        className="absolute inset-0"
-      />
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pointer-events-none" ref={ref}>
+    <section id="services" className="py-24 lg:py-32">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}

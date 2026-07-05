@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
-import InkReveal from './ui/ink-reveal'
 import { CheckCircle2 } from 'lucide-react'
 
 const reasons = [
@@ -50,15 +49,8 @@ export default function WhyUs() {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.05 })
 
   return (
-    <section id="why-us" className="relative py-24 lg:py-32 overflow-hidden">
-      <img src="/office%203.png" alt="" className="absolute inset-0 w-full h-full object-cover" />
-      <InkReveal
-        maskColor={[247, 248, 250]}
-        maskOpacity={1}
-        brushSize={160}
-        className="absolute inset-0"
-      />
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pointer-events-none z-10" ref={ref}>
+    <section id="why-us" className="py-24 lg:py-32">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8" ref={ref}>
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           <div className="lg:col-span-6">
             <motion.div
