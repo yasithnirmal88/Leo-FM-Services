@@ -94,26 +94,25 @@ export default function Navbar() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="lg:hidden bg-white border-t border-gray-100 shadow-xl overflow-hidden"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2, ease: 'easeInOut' }}
+            className="lg:hidden bg-white/95 backdrop-blur-md border-t border-gray-100 shadow-xl"
           >
             <div className="px-6 py-6 space-y-1">
               {links.map((link) => {
                 const sectionId = link.href.replace('#', '')
                 const isActive = activeSection === sectionId
                 return (
-                  <a
+                  <button
                     key={link.label}
-                    href={link.href}
-                    onClick={(e) => {
-                      e.preventDefault()
+                    onClick={() => {
                       setMobileOpen(false)
-                      scrollTo(link.href)
+                      const el = document.getElementById(sectionId)
+                      if (el) el.scrollIntoView({ behavior: 'smooth' })
                     }}
-                    className={`block relative px-4 py-3 text-base font-medium rounded-lg transition-colors duration-200 ${
+                    className={`block w-full text-left px-4 py-3 text-base font-medium rounded-lg transition-colors duration-200 ${
                       isActive ? 'text-accent bg-accent/5' : 'text-slate-500 hover:text-navy-800 hover:bg-gray-50'
                     }`}
                   >
@@ -125,21 +124,20 @@ export default function Navbar() {
                         transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                       />
                     )}
-                  </a>
+                  </button>
                 )
               })}
               <div className="pt-3">
-                <a
-                  href="#contact"
-                  onClick={(e) => {
-                    e.preventDefault()
+                <button
+                  onClick={() => {
                     setMobileOpen(false)
-                    scrollTo('#contact')
+                    const el = document.getElementById('contact')
+                    if (el) el.scrollIntoView({ behavior: 'smooth' })
                   }}
-                  className="block text-center px-5 py-3 bg-accent text-white text-base font-semibold rounded-lg hover:bg-accent-hover transition-colors"
+                  className="block w-full text-center px-5 py-3 bg-accent text-white text-base font-semibold rounded-lg hover:bg-accent-hover transition-colors"
                 >
                   Get a Quote
-                </a>
+                </button>
               </div>
             </div>
           </motion.div>

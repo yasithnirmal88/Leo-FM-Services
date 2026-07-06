@@ -56,12 +56,12 @@ export default function Hero() {
       {isDesktop && (
         <InkReveal
           maskColor={[247, 248, 250]}
-          maskOpacity={0.9}
+          maskOpacity={0.05}
           brushSize={180}
           className="absolute inset-0"
         />
       )}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/15 via-black/25 to-black/40 pointer-events-none z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/70 pointer-events-none z-[1]" />
 
       <div className="relative z-10 flex-1 flex flex-col pointer-events-none">
         <div className="flex-1 flex flex-col pt-28 lg:pt-32 pb-0">
@@ -73,7 +73,7 @@ export default function Hero() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, ease: 'easeOut' }}
                 >
-                  <span className="inline-block text-xs font-semibold tracking-[0.25em] uppercase text-white/70 bg-black/20 px-4 py-1.5 rounded-full mb-6 border border-white/10 backdrop-blur-sm pointer-events-auto">
+                  <span className="inline-block text-xs font-semibold tracking-[0.25em] uppercase text-white bg-black/40 px-4 py-1.5 rounded-full mb-6 border border-white/20 backdrop-blur-sm pointer-events-auto">
                     Premium commercial cleaning
                   </span>
                 </motion.div>
@@ -83,7 +83,7 @@ export default function Hero() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: 0.15, ease: 'easeOut' }}
                   className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold font-heading text-white leading-[1.05] tracking-[-0.03em] text-center max-w-4xl mx-auto pointer-events-auto"
-                  style={{ textShadow: '0 4px 30px rgba(0,0,0,0.55)' }}
+                  style={{ textShadow: '0 4px 40px rgba(0,0,0,0.7)' }}
                 >
                   Your facility,{' '}
                   <span className="text-accent">our mastery</span>
@@ -93,8 +93,8 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
-                  className="text-base lg:text-lg text-white/80 max-w-xl mx-auto mt-5 leading-relaxed pointer-events-auto"
-                  style={{ textShadow: '0 2px 12px rgba(0,0,0,0.4)' }}
+                  className="text-base lg:text-lg text-white max-w-xl mx-auto mt-5 leading-relaxed pointer-events-auto"
+                  style={{ textShadow: '0 2px 16px rgba(0,0,0,0.6)' }}
                 >
                   From daily upkeep to deep sanitation — we deliver spotless, 
                   healthy environments that make your business shine.
