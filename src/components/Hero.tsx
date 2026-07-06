@@ -83,10 +83,10 @@ export default function Hero() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: 0.15, ease: 'easeOut' }}
                   className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold font-heading text-white leading-[1.05] tracking-[-0.03em] text-center max-w-4xl mx-auto pointer-events-auto"
-                  style={{ textShadow: '0 4px 40px rgba(0,0,0,0.7)' }}
+                  style={{ textShadow: '0 2px 4px rgba(0,0,0,0.6), 0 8px 24px rgba(0,0,0,0.5), 0 16px 48px rgba(0,0,0,0.4)' }}
                 >
                   Your facility,{' '}
-                  <span className="text-accent">our mastery</span>
+                  <span className="text-accent" style={{ textShadow: '0 2px 12px rgba(46,111,242,0.4)' }}>our mastery</span>
                 </motion.h1>
 
                 <motion.p
