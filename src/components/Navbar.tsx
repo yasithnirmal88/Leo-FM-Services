@@ -6,12 +6,13 @@ import { useActiveSection } from '../hooks/useActiveSection'
 const links = [
   { label: 'Services', href: '#services' },
   { label: 'Capabilities', href: '#capabilities' },
+  { label: 'Service Area', href: '#service-area' },
   { label: 'Why Us', href: '#why-us' },
-  { label: 'Process', href: '#process' },
+  { label: 'Resources', href: '#resources' },
   { label: 'Contact', href: '#contact' },
 ]
 
-const sectionIds = ['hero', 'services', 'capabilities', 'why-us', 'process', 'contact']
+const sectionIds = ['hero', 'services', 'capabilities', 'service-area', 'why-us', 'process', 'resources', 'contact']
 
 function scrollTo(href: string) {
   const id = href.replace('#', '')
@@ -42,7 +43,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-18 lg:h-20">
           <a href="#" className="flex items-center shrink-0">
-            <img src="/idea%205%20png.png" alt="LEO FM" className="h-[56px] lg:h-[72px] w-auto" />
+            <img src="/idea%205%20png.png" alt="LEO FM — Facility Management Brisbane" className="h-[56px] lg:h-[72px] w-auto" />
           </a>
 
           <div className="hidden lg:flex items-center gap-6">

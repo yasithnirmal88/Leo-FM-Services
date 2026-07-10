@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /internal/
+Disallow: /staging/
+Disallow: /api/
+
+Sitemap: [INSERT: DOMAIN]/sitemap.xml

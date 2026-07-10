@@ -1,12 +1,32 @@
 import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, Globe, MessageCircle, Camera } from 'lucide-react'
 
-const companyLinks = ['About Us', 'Careers', 'Leadership Team', 'Press & Media']
-const serviceLinks = ['Commercial Cleaning', 'Deep & Sanitisation', 'Window & Facade', 'Carpet & Floor Care', 'Waste & Recycling', 'Post-Construction']
+const companyLinks = [
+  { label: 'About Us', href: '#why-us' },
+  { label: 'Our Services', href: '#services' },
+  { label: 'Capabilities', href: '#capabilities' },
+  { label: 'Contact', href: '#contact' },
+]
+const serviceLinks = [
+  { label: 'Commercial Cleaning', href: '#services' },
+  { label: 'Deep & Sanitisation', href: '#services' },
+  { label: 'Window & Facade', href: '#services' },
+  { label: 'Carpet & Floor Care', href: '#services' },
+  { label: 'Waste & Recycling', href: '#services' },
+  { label: 'Post-Construction', href: '#services' },
+]
+const locationLinks = [
+  'Brisbane CBD',
+  'Fortitude Valley',
+  'South Brisbane',
+  'Spring Hill',
+  'Newstead',
+  'Bowen Hills',
+]
 const contactDetails = [
-  { icon: Phone, label: '+1 (555) 000-1234' },
-  { icon: Mail, label: 'hello@leofm.com' },
-  { icon: MapPin, label: '200 Park Avenue, New York, NY 10166' },
+  { icon: Phone, label: '[INSERT: Phone number]' },
+  { icon: Mail, label: 'hello@leofm.com.au' },
+  { icon: MapPin, label: 'Brisbane, QLD [INSERT: Postcode], Australia' },
 ]
 
 export default function Footer() {
@@ -21,9 +41,9 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
             className="sm:col-span-2 lg:col-span-4"
           >
-            <img src="/idea%205%20png.png" alt="LEO FM" className="h-10 w-auto brightness-0 invert opacity-100" />
+            <img src="/idea%205%20png.png" alt="LEO FM — Facility Management Brisbane" className="h-10 w-auto brightness-0 invert opacity-100" />
               <p className="mt-4 text-base text-white/60 leading-relaxed max-w-xs">
-              Premium commercial cleaning and facility management for organizations that demand the highest standards.
+              Premium commercial cleaning, building maintenance and facility management for organizations across Brisbane and Queensland that demand the highest standards.
             </p>
             <div className="flex gap-3 mt-6">
               {[Globe, MessageCircle, Camera].map((Icon, i) => (
@@ -31,7 +51,7 @@ export default function Footer() {
                   key={i}
                   href="#"
                   className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 hover:text-white transition-all duration-200"
-                  aria-label="Social link"
+                  aria-label="Social media link"
                 >
                   <Icon size={16} />
                 </a>
@@ -43,8 +63,8 @@ export default function Footer() {
             <h4 className="text-sm font-semibold tracking-[0.15em] uppercase text-white/50 mb-5">Company</h4>
             <ul className="space-y-3">
               {companyLinks.map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-base text-white/90 hover:text-white transition-colors duration-200">{item}</a>
+                <li key={item.label}>
+                  <a href={item.href} className="text-base text-white/90 hover:text-white transition-colors duration-200">{item.label}</a>
                 </li>
               ))}
             </ul>
@@ -54,8 +74,8 @@ export default function Footer() {
             <h4 className="text-sm font-semibold tracking-[0.15em] uppercase text-white/50 mb-5">Services</h4>
             <ul className="space-y-3">
               {serviceLinks.map((item) => (
-                <li key={item}>
-                  <a href="#services" className="text-base text-white/90 hover:text-white transition-colors duration-200">{item}</a>
+                <li key={item.label}>
+                  <a href={item.href} className="text-base text-white/90 hover:text-white transition-colors duration-200">{item.label}</a>
                 </li>
               ))}
             </ul>
@@ -71,11 +91,19 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+            <div className="mt-6">
+              <h5 className="text-xs font-semibold tracking-[0.15em] uppercase text-white/40 mb-3">Service Areas</h5>
+              <div className="flex flex-wrap gap-x-4 gap-y-1">
+                {locationLinks.map((loc) => (
+                  <span key={loc} className="text-sm text-white/60">{loc}</span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
         <div className="mt-14 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/40">
-          <p>&copy; {new Date().getFullYear()} LEO FM. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} LEO FM — Facility Management Brisbane. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-white/40 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white/40 transition-colors">Terms of Service</a>

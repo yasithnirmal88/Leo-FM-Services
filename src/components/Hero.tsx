@@ -52,7 +52,7 @@ export default function Hero() {
 
   return (
     <section id="hero" className="relative min-h-screen flex flex-col overflow-hidden">
-      <img src="/office.png" alt="" className="absolute inset-0 w-full h-full object-cover" />
+      <img src="/office.png" alt="LEO FM — Professional commercial cleaning and facility management services in Brisbane" className="absolute inset-0 w-full h-full object-cover" />
       {isDesktop && (
         <InkReveal
           maskColor={[247, 248, 250]}

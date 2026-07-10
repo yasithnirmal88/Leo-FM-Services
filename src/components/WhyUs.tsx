@@ -87,7 +87,7 @@ export default function WhyUs() {
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src="/hotel.png"
-                alt="Hotel interior"
+                alt="Luxury hotel interior — LEO FM commercial cleaning and facility management"
                 className="absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-navy-800/30 mix-blend-multiply" />
