@@ -36,10 +36,10 @@ export default function Blog() {
             Resources
           </span>
           <h2 className="text-4xl lg:text-5xl font-bold font-heading text-navy-800 mt-4 leading-tight">
-            Insights for facility managers
+            Facility management insights for Brisbane
           </h2>
           <p className="text-slate-400 mt-4 text-lg leading-relaxed">
-            Practical guides and industry knowledge for Brisbane commercial property and facility management professionals.
+            Practical guides on quality FM services, commercial cleaning, and building maintenance for facility managers across Queensland.
           </p>
         </motion.div>
 

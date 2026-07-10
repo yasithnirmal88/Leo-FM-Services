@@ -33,10 +33,10 @@ export default function ServiceArea() {
             Service area
           </span>
           <h2 className="text-4xl lg:text-5xl font-bold font-heading text-navy-800 mt-4 leading-tight">
-            Facility management across Brisbane &amp; South East Queensland
+            Facility management services near me — Brisbane &amp; Queensland
           </h2>
           <p className="text-slate-400 mt-4 text-lg leading-relaxed">
-            LEO FM provides premium commercial cleaning, building maintenance and facility management to businesses throughout Brisbane and surrounding suburbs. Our local teams respond fast, backed by a dedicated account manager.
+            Leo FM provides quality facility management services in Brisbane and across Queensland. Whether you need commercial cleaning, building maintenance, or reliable FM services near me — our local team delivers.
           </p>
         </motion.div>
 
@@ -48,7 +48,7 @@ export default function ServiceArea() {
           >
             <h3 className="text-xl font-bold font-heading text-navy-800 mb-6 flex items-center gap-3">
               <MapPin size={20} className="text-accent" />
-              Suburbs we serve
+              Brisbane suburbs we serve
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
               {locations.map((loc) => (

@@ -12,7 +12,7 @@ export function getLocalBusinessSchema() {
     url: domain(),
     logo: `${domain()}/idea%205%20png.png`,
     image: `${domain()}/office.png`,
-    description: 'Premium commercial cleaning and facility management services based in Brisbane, Queensland, serving businesses across Australia.',
+    description: 'Looking for quality facility management services near me? Leo FM delivers trustworthy FM services in Brisbane — commercial cleaning, building maintenance and facility management across Queensland.',
     address: {
       '@type': 'PostalAddress',
       streetAddress: '[INSERT: Street address]',
@@ -56,8 +56,8 @@ export function getServiceSchema() {
     '@type': 'Service',
     '@id': `${domain()}/#service`,
     provider: { '@id': `${domain()}/#organization` },
-    name: 'Commercial Cleaning & Facility Management',
-    description: 'Comprehensive facility services including commercial cleaning, deep sanitisation, window & facade cleaning, carpet & floor care, waste & recycling, post-construction cleaning, preventative maintenance, landscape maintenance, and facility management reporting.',
+    name: 'Facility Management Services Brisbane',
+    description: 'Leo FM provides quality FM services in Brisbane and across Queensland — including commercial cleaning, building maintenance, grounds care and facility management. Trustworthy facility management services near you.',
     areaServed: { '@type': 'City', name: 'Brisbane' },
     serviceType: [
       'Commercial Cleaning',

@@ -87,13 +87,13 @@ export default function Services() {
           className="text-center max-w-2xl mx-auto mb-16"
         >
           <span className="text-xs font-semibold tracking-[0.2em] uppercase text-accent">
-            What we do
+            FM services
           </span>
           <h2 className="text-4xl lg:text-5xl font-bold font-heading text-navy-800 mt-4 leading-tight">
-            Comprehensive cleaning services
+            Quality facility management in Brisbane
           </h2>
           <p className="text-slate-400 mt-4 text-lg leading-relaxed">
-            Every surface, schedule, and standard under one accountable partnership.
+            From commercial cleaning to building maintenance — Leo FM provides trustworthy FM services near me for businesses across Queensland.
           </p>
         </motion.div>
 

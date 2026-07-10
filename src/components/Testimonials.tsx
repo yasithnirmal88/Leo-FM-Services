@@ -74,10 +74,10 @@ export default function Testimonials() {
             Testimonials
           </span>
           <h2 className="text-4xl lg:text-5xl font-bold font-heading text-navy-800 mt-4 leading-tight">
-            Trusted by industry leaders
+            Trusted for quality facility management
           </h2>
           <p className="text-slate-400 mt-4 text-lg leading-relaxed">
-            See what our clients say about partnering with LEO FM.
+            See why Brisbane businesses choose Leo FM as their trustworthy facility management partner.
           </p>
         </motion.div>
 

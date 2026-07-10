@@ -69,13 +69,13 @@ export default function Capabilities() {
           className="text-center max-w-2xl mx-auto mb-12"
         >
           <span className="text-xs font-semibold tracking-[0.2em] uppercase text-accent">
-            What we cover
+            FM capabilities
           </span>
           <h2 className="text-4xl lg:text-5xl font-bold font-heading text-navy-800 mt-4 leading-tight">
-            Full-scope capabilities, one accountable team
+            Quality facility management services — everything under one roof
           </h2>
           <p className="text-slate-400 mt-4 text-lg leading-relaxed">
-            From daily cleaning to capital planning — every facility need under a single partnership.
+            From daily cleaning to capital planning — Leo FM covers every facility management need across Brisbane and Queensland.
           </p>
         </motion.div>
 

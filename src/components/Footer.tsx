@@ -41,9 +41,9 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
             className="sm:col-span-2 lg:col-span-4"
           >
-            <img src="/idea%205%20png.png" alt="LEO FM — Facility Management Brisbane" className="h-10 w-auto brightness-0 invert opacity-100" />
+            <img src="/idea%205%20png.png" alt="Leo FM — facility management services Brisbane, quality FM services near me" className="h-10 w-auto brightness-0 invert opacity-100" />
               <p className="mt-4 text-base text-white/60 leading-relaxed max-w-xs">
-              Premium commercial cleaning, building maintenance and facility management for organizations across Brisbane and Queensland that demand the highest standards.
+              Looking for trustworthy facility management services near me in Brisbane? Leo FM delivers quality FM services including commercial cleaning, building maintenance, and facility management across Queensland.
             </p>
             <div className="flex gap-3 mt-6">
               {[Globe, MessageCircle, Camera].map((Icon, i) => (

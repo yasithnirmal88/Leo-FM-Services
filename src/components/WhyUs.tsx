@@ -59,15 +59,15 @@ export default function WhyUs() {
               transition={{ duration: 0.6, ease: 'easeOut' }}
             >
               <span className="text-xs font-semibold tracking-[0.2em] uppercase text-accent">
-                Why LEO FM
+                Why Leo FM
               </span>
               <h2 className="text-4xl lg:text-5xl font-bold font-heading text-navy-800 mt-4 leading-tight">
-                Built different.{' '}
-                <span className="text-accent">Built better.</span>
+                Quality & trustworthy.{' '}
+                <span className="text-accent">That's facility management.</span>
               </h2>
               <p className="text-slate-400 mt-4 text-lg leading-relaxed max-w-md">
-                We don't just clean buildings — we elevate how they feel, 
-                function, and reflect your brand.
+                Leo FM delivers quality facility management services in Brisbane you can count on. 
+                We don't just clean buildings — we elevate how they feel, function, and reflect your brand.
               </p>
             </motion.div>
 
@@ -87,7 +87,7 @@ export default function WhyUs() {
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src="/hotel.png"
-                alt="Luxury hotel interior — LEO FM commercial cleaning and facility management"
+                alt="Quality facility management services near me — Leo FM Brisbane"
                 className="absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-navy-800/30 mix-blend-multiply" />

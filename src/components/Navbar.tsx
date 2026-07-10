@@ -43,7 +43,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-18 lg:h-20">
           <a href="#" className="flex items-center shrink-0">
-            <img src="/idea%205%20png.png" alt="LEO FM — Facility Management Brisbane" className="h-[56px] lg:h-[72px] w-auto" />
+            <img src="/idea%205%20png.png" alt="Leo FM — quality facility management services Brisbane" className="h-[56px] lg:h-[72px] w-auto" />
           </a>
 
           <div className="hidden lg:flex items-center gap-6">

@@ -102,13 +102,13 @@ export default function CTA() {
             className="lg:col-span-5"
           >
             <span className="text-sm font-semibold tracking-[0.2em] uppercase text-white/60">
-              Get started
+              Get started with Leo FM
             </span>
             <h2 className="text-4xl lg:text-5xl font-bold font-heading text-white mt-4 leading-tight">
-              Ready for a cleaner facility?
+              Quality facility management services near me in Brisbane?
             </h2>
             <p className="text-white/60 mt-4 text-lg leading-relaxed">
-              Tell us about your space and we'll craft a proposal tailored to 
+              Tell us about your facility and we'll craft a trustworthy FM services proposal tailored to 
               your needs — typically within 24 hours.
             </p>
             <div className="hidden lg:block mt-8 space-y-3">

@@ -52,7 +52,7 @@ export default function Hero() {
 
   return (
     <section id="hero" className="relative min-h-screen flex flex-col overflow-hidden">
-      <img src="/office.png" alt="LEO FM — Professional commercial cleaning and facility management services in Brisbane" className="absolute inset-0 w-full h-full object-cover" />
+      <img src="/office.png" alt="Leo FM — quality facility management services in Brisbane and Queensland" className="absolute inset-0 w-full h-full object-cover" />
       {isDesktop && (
         <InkReveal
           maskColor={[247, 248, 250]}
@@ -74,7 +74,7 @@ export default function Hero() {
                   transition={{ duration: 0.7, ease: 'easeOut' }}
                 >
                   <span className="inline-block text-xs font-semibold tracking-[0.25em] uppercase text-white bg-black/40 px-4 py-1.5 rounded-full mb-6 border border-white/20 backdrop-blur-sm pointer-events-auto">
-                    Premium commercial cleaning
+                    Facility management services Brisbane
                   </span>
                 </motion.div>
 
@@ -85,8 +85,8 @@ export default function Hero() {
                   className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold font-heading text-white leading-[1.05] tracking-[-0.03em] text-center max-w-4xl mx-auto pointer-events-auto"
                   style={{ textShadow: '0 2px 4px rgba(0,0,0,0.6), 0 8px 24px rgba(0,0,0,0.5), 0 16px 48px rgba(0,0,0,0.4)' }}
                 >
-                  Your facility,{' '}
-                  <span className="text-accent" style={{ textShadow: '0 2px 12px rgba(46,111,242,0.4)' }}>our mastery</span>
+                  Leo FM —{' '}
+                  <span className="text-accent" style={{ textShadow: '0 2px 12px rgba(46,111,242,0.4)' }}>your quality facility management partner</span>
                 </motion.h1>
 
                 <motion.p
@@ -96,8 +96,7 @@ export default function Hero() {
                   className="text-base lg:text-lg text-white max-w-xl mx-auto mt-5 leading-relaxed pointer-events-auto"
                   style={{ textShadow: '0 2px 16px rgba(0,0,0,0.6)' }}
                 >
-                  From daily upkeep to deep sanitation — we deliver spotless, 
-                  healthy environments that make your business shine.
+                  From daily upkeep to deep sanitation — Leo FM delivers trustworthy facility management services near me in Brisbane, keeping your commercial property spotless and well-maintained.
                 </motion.p>
 
                 <motion.div

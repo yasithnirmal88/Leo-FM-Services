@@ -22,13 +22,13 @@ export default function Process() {
           className="text-center max-w-2xl mx-auto mb-16"
         >
           <span className="text-xs font-semibold tracking-[0.2em] uppercase text-accent">
-            How it works
+            How Leo FM works
           </span>
           <h2 className="text-4xl lg:text-5xl font-bold font-heading text-navy-800 mt-4 leading-tight">
-            From first call to seamless service
+            From first call to facility management
           </h2>
           <p className="text-slate-400 mt-4 text-lg leading-relaxed">
-            A proven process that makes onboarding effortless.
+            A proven process that makes FM services in Brisbane effortless.
           </p>
         </motion.div>
 
